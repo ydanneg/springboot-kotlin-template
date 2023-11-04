@@ -1,0 +1,40 @@
+[versions]
+kotlin = "1.8.20"
+spring-boot = "3.1.5"
+springdoc = "2.2.0"
+kotlinx-serialization = "1.5.1"
+
+[libraries]
+springboot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+springboot-autoconfigure = { module = "org.springframework.boot:spring-boot-autoconfigure" }
+springboot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+springboot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+springboot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security" }
+springboot-starter-oauth2-resource-server = { module = "org.springframework.boot:spring-boot-starter-oauth2-resource-server" }
+springboot-starter-cache = { module = "org.springframework.boot:spring-boot-starter-cache" }
+springboot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+springboot-starter-thymeleaf = { module = "org.springframework.boot:spring-boot-starter-thymeleaf" }
+springboot-devtools = { module = "org.springframework.boot:spring-boot-devtools" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
+jackson-datatype-jdk8 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jdk8" }
+jackson-datatype-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core"}
+kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor"}
+
+springdoc-openapi-webflux-ui = { module = "org.springdoc:springdoc-openapi-starter-webflux-ui", version.ref = "springdoc" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+reactor-kotlin-extensions = { module = "io.projectreactor.kotlin:reactor-kotlin-extensions" }
+
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
+apache-httpmime = "org.apache.httpcomponents:httpmime:4.5.13"
+jose-jwt = "com.nimbusds:nimbus-jose-jwt:9.30.2"
+apache-commons-csv = "org.apache.commons:commons-csv:1.10.0"
+kotlintest-runner-junit5 = "io.kotlintest:kotlintest-runner-junit5:3.4.2"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+springboot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+graalvm = "org.graalvm.buildtools.native:0.9.28"
