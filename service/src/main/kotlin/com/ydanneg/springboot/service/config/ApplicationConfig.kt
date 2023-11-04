@@ -12,11 +12,6 @@ import org.springframework.web.reactive.config.WebFluxConfigurer
 @EnableWebFlux
 class ApplicationConfig : WebFluxConfigurer {
 
-    override fun configureHttpMessageCodecs(configurer: ServerCodecConfigurer) {
-        configurer.defaultCodecs().kotlinSerializationJsonEncoder(kotlinSerializationJsonEncoder())
-        configurer.defaultCodecs().kotlinSerializationJsonDecoder(kotlinSerializationJsonDecoder())
-    }
-
     @Bean
     fun kotlinSerializationJsonEncoder(): KotlinSerializationJsonEncoder =
         KotlinSerializationJsonEncoder(Serializers.json)
@@ -24,4 +19,9 @@ class ApplicationConfig : WebFluxConfigurer {
     @Bean
     fun kotlinSerializationJsonDecoder(): KotlinSerializationJsonDecoder =
         KotlinSerializationJsonDecoder(Serializers.json)
+
+    override fun configureHttpMessageCodecs(configurer: ServerCodecConfigurer) {
+        configurer.defaultCodecs().kotlinSerializationJsonEncoder(kotlinSerializationJsonEncoder())
+        configurer.defaultCodecs().kotlinSerializationJsonDecoder(kotlinSerializationJsonDecoder())
+    }
 }
