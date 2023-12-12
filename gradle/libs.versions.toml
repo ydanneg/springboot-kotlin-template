@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.8.20"
 spring-boot = "3.1.5"
-springdoc = "2.2.0"
+springdoc = "2.3.0"
 kotlinx-serialization = "1.6.2"
 
 [libraries]
