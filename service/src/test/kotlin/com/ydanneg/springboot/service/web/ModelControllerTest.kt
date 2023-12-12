@@ -1,6 +1,6 @@
 package com.ydanneg.springboot.service.web
 
-import com.ydanneg.springboot.model.Model1
+import com.ydanneg.springboot.model.Model
 import com.ydanneg.springboot.test.SpringBootIntegrationTest
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
@@ -17,7 +17,7 @@ class ModelControllerTest {
 
     @Test
     fun test() {
-        val body = Model1(UUID.randomUUID().toString(), UUID.randomUUID().toString())
+        val body = Model(UUID.randomUUID().toString(), UUID.randomUUID().toString())
 
         client.post()
             .uri("/model")
@@ -26,7 +26,7 @@ class ModelControllerTest {
             .exchange()
             .expectHeader().contentType(MediaType.APPLICATION_JSON)
             .expectStatus().isCreated
-            .expectBody(Model1::class.java)
+            .expectBody(Model::class.java)
             .isEqualTo(body)
     }
 

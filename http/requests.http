@@ -1,0 +1,21 @@
+###
+GET http://localhost:8080/v1/models/345678
+
+###
+POST http://localhost:8080/v1/models
+Content-Type: application/json
+
+{
+  "name": "Model X"
+}
+
+###
+GET http://localhost:8080/v2/models/345678
+
+###
+POST http://localhost:8080/v2/models
+Content-Type: application/json
+
+{
+  "name": "Model Y"
+}
