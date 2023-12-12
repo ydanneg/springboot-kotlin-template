@@ -1,7 +1,10 @@
 package com.ydanneg.springboot.service.web
 
+import com.ydanneg.springboot.model.CreateModelRequest
 import com.ydanneg.springboot.model.Model
 import com.ydanneg.springboot.test.SpringBootIntegrationTest
+import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldNotBe
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.test.web.reactive.server.WebTestClient
@@ -17,17 +20,22 @@ class ModelControllerTest {
 
     @Test
     fun test() {
-        val body = Model(UUID.randomUUID().toString(), UUID.randomUUID().toString())
+        val request = CreateModelRequest(UUID.randomUUID().toString())
 
-        client.post()
-            .uri("/model")
+        val body = client.post()
+            .uri("/v1/models")
             .accept(MediaType.APPLICATION_JSON)
-            .body(BodyInserters.fromValue(body))
+            .body(BodyInserters.fromValue(request))
             .exchange()
             .expectHeader().contentType(MediaType.APPLICATION_JSON)
             .expectStatus().isCreated
             .expectBody(Model::class.java)
-            .isEqualTo(body)
+            .returnResult().responseBody
+
+        body shouldNotBe null
+        with(body!!) {
+            name shouldBe request.name
+        }
     }
 
 }

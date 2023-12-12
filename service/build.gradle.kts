@@ -29,6 +29,7 @@ dependencies {
     implementation(myLibs.kotlinx.coroutines.reactor)
     implementation(myLibs.kotlin.reflect)
 
+    testImplementation(myLibs.kotest.assertions.core)
     testImplementation(myLibs.springboot.starter.test) {
         exclude(module = "mockito-core")
         exclude(module = "junit")

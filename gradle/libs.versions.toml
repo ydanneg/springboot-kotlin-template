@@ -3,6 +3,7 @@ kotlin = "1.9.21"
 spring-boot = "3.2.0"
 springdoc = "2.3.0"
 kotlinx-serialization = "1.6.2"
+kotest = "5.8.0"
 
 [libraries]
 springboot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
@@ -24,6 +25,9 @@ reactor-kotlin-extensions = { module = "io.projectreactor.kotlin:reactor-kotlin-
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlintest-runner-junit5 = "io.kotlintest:kotlintest-runner-junit5:3.4.2"
+
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

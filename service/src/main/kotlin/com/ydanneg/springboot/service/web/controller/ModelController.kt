@@ -1,4 +1,4 @@
-package com.ydanneg.springboot.service.web
+package com.ydanneg.springboot.service.web.controller
 
 import com.ydanneg.springboot.model.CreateModelRequest
 import com.ydanneg.springboot.model.Model
