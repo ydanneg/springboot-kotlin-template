@@ -10,7 +10,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.ydanneg.springboot.service.ApplicationKt")
+    mainClass = "com.ydanneg.springboot.service.ApplicationKt"
 }
 
 dependencies {

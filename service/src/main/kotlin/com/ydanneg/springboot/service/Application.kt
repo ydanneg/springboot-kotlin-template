@@ -12,5 +12,6 @@ fun main(args: Array<String>) {
     runApplication<Application>(*args) {
         webApplicationType = REACTIVE
         setBannerMode(OFF)
+        setLazyInitialization(true)
     }
 }
