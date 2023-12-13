@@ -5,6 +5,7 @@ plugins {
     alias(myLibs.plugins.springboot)
     alias(myLibs.plugins.kotlin.serialization)
     alias(myLibs.plugins.kotlin.spring)
+    alias(myLibs.plugins.springdoc.openapi)
 //    alias(myLibs.plugins.graalvm)
     application
 }
@@ -24,7 +25,6 @@ dependencies {
     developmentOnly("${myLibs.springboot.devtools.get().module}:${springBom.version}")
     implementation(myLibs.springboot.autoconfigure)
     implementation(myLibs.springdoc.openapi.webflux.ui)
-
     implementation(myLibs.kotlinx.coroutines.core)
     implementation(myLibs.kotlinx.coroutines.reactor)
     implementation(myLibs.kotlin.reflect)
