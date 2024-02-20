@@ -35,4 +35,4 @@ springboot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 springdoc-openapi = { id = "org.springdoc.openapi-gradle-plugin", version.ref = "springdoc-plugin" }
-graalvm = "org.graalvm.buildtools.native:0.9.28"
+graalvm = "org.graalvm.buildtools.native:0.10.1"
