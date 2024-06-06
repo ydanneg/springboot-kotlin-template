@@ -4,7 +4,7 @@ spring-boot = "3.2.5"
 springdoc = "2.5.0"
 springdoc-plugin = "1.8.0"
 kotlinx-serialization = "1.6.3"
-kotest = "5.8.1"
+kotest = "5.9.1"
 
 [libraries]
 springboot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
